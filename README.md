@@ -7,24 +7,35 @@ Facilitates the creation of PIM reference data and related views in the PIM.
 
 For more information, please see http://docs.akeneo.com/
 
+## THIS FORK
+This fork is intended to allow a temporary patch, expecting an update from the offical repository.
+
 ## Requirements
 
 | CustomEntityBundle   | Akeneo PIM Community Edition |
 |:--------------------:|:----------------------------:|
-| v4.0.*               | v4.0.*                       |
-| v3.0.*               | v3.0.*                       |
-| v2.4.*               | v2.3.*                       |
-| v2.3.*               | v2.2.*                       |
-| v2.2.*               | v2.1.*                       |
-| v2.1.*               | v2.1.*                       |
-| v2.0.*               | v2.0.*                       |
-| v1.10.*              | v1.7.*                       |
+| v5.0.*               | v5.0.*                       |
+
 
 ## Installation
-You can install this bundle with composer (see requirements section):
+You can install this fork by adding the repository section in your composer.json file:
 
 ```bash
-    php composer.phar require "akeneo-labs/custom-entity-bundle":"4.0.*"
+#composer.json
+        "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vincentlemire/custom-entity-bundle"
+        }
+    ],
+    ...
+    "require": {
+        "akeneo/pim-community-dev": "^5.0.0",
+        "akeneo-labs/custom-entity-bundle" : "5.0.x-dev",
+        ...
+    },
+
+
 ```
 
 Then add the following lines **at the end** of your config/routes/routes.yml :
